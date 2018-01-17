@@ -8,8 +8,6 @@ snr.output => dac;
 hh.output => dac;
 crash.output => dac;
 
-
-
 while(true) {
 	crash.keyOn();
 	kc.keyOn();
@@ -28,5 +26,5 @@ while(true) {
 	snr.keyOn();
 	200::ms => now;
 	hh.keyOn();
-	200::ms => now;	
+	200::ms => now;
 }

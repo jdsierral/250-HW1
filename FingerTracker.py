@@ -1,5 +1,5 @@
 import Trackpad
-import Osc
+import OscSender
 import os
 import subprocess
 import struct
@@ -33,10 +33,11 @@ def printData(MTEvent):
     print("Area: " + str(MTEvent.area))
 
 def broadcastData(data):
-    x = struct.pack('!f', data.normVec.pos.x)
-    y = struct.pack('!f', data.normVec.pos.y)
-    msg = x + y
-    Osc.sendOscMsg(msg)
+    s = data.state
+    x = data.normVec.pos.x
+    y = data.normVec.pos.y
+    z = data.size
+    OscSender.sendOscMsg(s, x, y, z)
 
 @Trackpad.MTContactCallbackFunction
 def callback(device, data_ptr, n_fingers, timestamp, frame):
@@ -51,4 +52,7 @@ def callback(device, data_ptr, n_fingers, timestamp, frame):
 Trackpad.initialize(callback)
 Trackpad.disableTrackpad()
 atexit.register(Trackpad.enableTrackpad)
-subprocess.call(["ChucK", "HW1Instr.ck"])
+subprocess.call(["ChucK", "Execute.ck"])
+
+while(True):
+    time.sleep(0.01)

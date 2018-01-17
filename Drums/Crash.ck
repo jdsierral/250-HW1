@@ -17,6 +17,11 @@ public class Crash {
 		spork ~ trigger();
 	}
 
+    fun void keyOn(float vel) {
+        gen.
+        spork ~ trigger();
+    }
+
 
     fun void trigger() {
 		env.keyOn();
