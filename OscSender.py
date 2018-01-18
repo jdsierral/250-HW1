@@ -9,8 +9,9 @@ PORT = 6449
 PREFIX = "/MT"
 client = udp_client.UDPClient(HOST, PORT)
 
-def sendOscMsg(s, x, y, z):
+def sendOscMsg(ID, s, x, y, z):
     msg = osc_message_builder.OscMessageBuilder(address = PREFIX)
+    msg.add_arg(ID)
     msg.add_arg(s)
     msg.add_arg(x)
     msg.add_arg(y)

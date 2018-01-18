@@ -13,13 +13,18 @@ public class Crash {
 
     env.set(0.2::ms, 1.2::second, 0.0, 1::samp);
     td.set(1::ms, 50::ms, 0.1, 1::samp);
+
     fun void keyOn() {
 		spork ~ trigger();
 	}
 
     fun void keyOn(float vel) {
-        gen.
+        computeVelocity(vel);
         spork ~ trigger();
+    }
+
+    fun void computeVelocity(float vel) {
+        vel => output.gain;
     }
 
 

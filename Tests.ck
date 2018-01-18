@@ -28,3 +28,28 @@ while(true) {
 	hh.keyOn();
 	200::ms => now;
 }
+
+/* 
+fun void processLeadEvent(OscEvent event) {
+    event.getInt() => int ID;
+    event.getInt() => int state;
+    if (DEBUG) <<< state >>>;
+    if (state == 1) {
+        event.getFloat() => float x;
+        event.getFloat() => float y;
+        event.getFloat() => float s;
+        map.getZone(x, y) + 60 => int note;
+        computeVelocity(s) => float vel;
+        moog.freq(Std.mtof(note));
+        moog.noteOn(vel);
+    } else if (state == 4) {
+        event.getFloat() => float x;
+        event.getFloat() => float y;
+        event.getFloat() => float s;
+        map.getZone(x, y) + 60 => int note;
+        computeVelocity(s) => float vel;
+        moog.freq(Std.mtof(note));
+    } else if (state == 7) {
+        moog.noteOff(0.0);
+    }
+} */

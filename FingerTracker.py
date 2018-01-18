@@ -33,11 +33,12 @@ def printData(MTEvent):
     print("Area: " + str(MTEvent.area))
 
 def broadcastData(data):
+    ID = data.ID
     s = data.state
     x = data.normVec.pos.x
     y = data.normVec.pos.y
     z = data.size
-    OscSender.sendOscMsg(s, x, y, z)
+    OscSender.sendOscMsg(ID, s, x, y, z)
 
 @Trackpad.MTContactCallbackFunction
 def callback(device, data_ptr, n_fingers, timestamp, frame):

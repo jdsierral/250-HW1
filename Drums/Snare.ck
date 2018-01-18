@@ -18,6 +18,15 @@ public class Snare {
         spork ~ trigger();
     }
 
+    fun void keyOn(float vel) {
+        computeVelocity(vel);
+        spork ~ trigger();
+    }
+
+    fun void computeVelocity(float vel) {
+        vel => output.gain;
+    }
+
     fun void trigger() {
         env.keyOn();
         td.keyOn();

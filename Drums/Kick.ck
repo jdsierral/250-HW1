@@ -12,9 +12,18 @@ public class Kick {
 
     env.set(1.5::ms, 180::ms, 0.0001, 1::samp);
 
-	fun void keyOn() {
+    fun void keyOn() {
+        spork ~ trigger();
+    }
+
+	fun void keyOn(float vel) {
+        computeVelocity(vel);
 		spork ~ trigger();
 	}
+
+    fun void computeVelocity(float vel) {
+        vel => output.gain;
+    }
 
 
     fun void trigger() {
