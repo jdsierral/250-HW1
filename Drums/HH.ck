@@ -1,5 +1,9 @@
+/* Public Class for HiHat sound in Drums  */
+
 public class HH {
+    /* Each instrument has an output to control gain and connect to dac */
     Gain output;
+    /* this generator works as node to connect different source waveforms */
     Gain gen;
     gen.gain(0.7);
 

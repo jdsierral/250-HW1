@@ -1,3 +1,5 @@
+/* Main Chuck file. It loads and manages the whole synth */
+
 Kick kc;
 Snare snr;
 HH hh;

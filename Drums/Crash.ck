@@ -1,5 +1,9 @@
+/* Public Class for Crash sound in Drums  */
+
 public class Crash {
+    /* Each instrument has an output to control gain and connect to dac */
     Gain output;
+    /* this generator works as node to connect different source waveforms */
     Gain gen;
     gen.gain(0.7);
 
@@ -15,6 +19,7 @@ public class Crash {
     td.set(1::ms, 50::ms, 0.1, 1::samp);
 
     fun void keyOn() {
+        /* Spork each note to allow for independent sounds to coexist */
 		spork ~ trigger();
 	}
 

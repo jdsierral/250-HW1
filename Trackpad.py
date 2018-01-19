@@ -1,3 +1,9 @@
+# This file interconnects with the API to get the gestures from the trackpad
+# currently is getting semi raw data which allows to track each finger gesture
+# individually. It also allow to track the coordinates and the size of the
+# finger pressing the trackpad which is later used as the velocity of the noteOn
+# event
+
 import ctypes
 import io
 from ctypes.util import find_library

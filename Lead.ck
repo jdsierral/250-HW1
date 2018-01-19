@@ -1,3 +1,6 @@
+/* Lead developed but not used. It was a little bit tricky to manage all the
+noteOn and Off sync to avoid glitches. */
+
 public class Lead {
     Gain output;
     Gain gen;

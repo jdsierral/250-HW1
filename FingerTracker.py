@@ -1,3 +1,10 @@
+# This File is in charge of managing trackpad data.
+# registering the callback for the api and deciding what to broadcast via OSC
+# It is also the main execution file as it will call the subprocess chuck!!
+# Finally it reaches to system settings to disable temporarily the trackpad to
+# avoid moving everything with the cursor. To rever this last thing
+# at anExit function is registered to revert the process.
+
 import Trackpad
 import OscSender
 import os

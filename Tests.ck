@@ -1,3 +1,5 @@
+/* Some tests */
+
 Kick kc;
 Snare snr;
 HH hh;
@@ -29,7 +31,7 @@ while(true) {
 	200::ms => now;
 }
 
-/* 
+/*
 fun void processLeadEvent(OscEvent event) {
     event.getInt() => int ID;
     event.getInt() => int state;

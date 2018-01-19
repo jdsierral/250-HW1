@@ -1,5 +1,9 @@
+/* Public Class for Kick sound in Drums  */
+
 public class Kick {
+    /* Each instrument has an output to control gain and connect to dac */
     Gain output;
+    /* this generator works as node to connect different source waveforms */
     Gain gen;
     SqrOsc sqr => gen;
     TriOsc sin => gen;

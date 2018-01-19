@@ -1,3 +1,5 @@
+# Python script to send osc messages with osc_Python library
+
 import argparse
 import time
 

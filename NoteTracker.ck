@@ -1,3 +1,6 @@
+/* This Note tracker is used to manage a polyphonic synth
+Nevertheless it was not used. It allow for 10 voices  */
+
 public class NoteTracker {
     10 => int numVoices;
     int notes[10];

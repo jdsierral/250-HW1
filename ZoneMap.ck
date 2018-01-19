@@ -1,3 +1,6 @@
+/* This class allow the managment of the trackpad zones. It creates different
+modes such as drums, melody and harmony with differnt zone distribuitions. */
+
 public class ZoneMap {
     0 => int drumMapping;
     1 => int melMapping;
