@@ -26,6 +26,8 @@ and ID of finger). Then this information is fed to chuck through OSC with python
 I could trace back the creator of this python wrapper to use the apple API library to this website.
 I didnt develop that part although my version was rewritten to organize a little bit some things.
 
+http://blog.sendapatch.se/2009/november/macbook-multitouch-in-python.html
+
 # Chuck scripts
 
 The chuck scripts for the drums were totally developed from 0 just with additive synthesis and substractive synthesis.
